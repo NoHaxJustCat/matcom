@@ -1,0 +1,26 @@
+{
+  "simulate":
+  {
+     "inputs":
+     [
+        {"name":"datcom_case",  "kind":"required", "type":["struct"]},
+        {"name":"mach_array",  "kind":"required", "type":["numeric"]},
+		{"name":"OutputType","kind":"optional","type":["char", "choices={'cd','x_cp'}"]},
+		{"name":"InterpolationType", "kind":"optional", "type":["char", "choices={'linear','makima','nearest','next','previous','pchip','cubic','v5cubic','spline'}"]},
+		{"name":"SampleScale", "kind":"optional", "type":["numerical"]}
+     ]
+  },
+  "simulate_double":
+  {
+   "inputs":
+	 [
+		{"name":"datcom_case",  "kind":"required", "type":["struct"]},
+		{"name":"mach_array",  "kind":"required", "type":["numeric"]},
+		{"name":"param",  "kind":"required", "type":["numeric"]},
+		{"name":"param_type",  "kind":"required", "type":["char"]},
+		{"name":"OutputType","kind":"optional","type":["char", "choices={'cd','x_cp'}"]},
+		{"name":"InterpolationType", "kind":"optional", "type":["char", "choices={'linear','makima','nearest','next','previous','pchip','cubic','v5cubic','spline'}"]},
+		{"name":"SampleScale", "kind":"optional", "type":["numerical"]}
+	 ]
+  }
+}
