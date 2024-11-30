@@ -30,13 +30,13 @@ function [x, y] = simulate(datcom_case, mach_array, varargin)
     y = zeros(size(mach_matrix));
    
     parfor i = 1:size(mach_matrix, 2)-1
-        y(:, i) = eval_mach(datcom_case, mach_matrix(:, i)', output_type, i);
+        y(:, i) = eval_mach(datcom_case, mach_matrix(:, i)', output_type);
     end   
     
     if extras > 0
-        y(1:extras, end) = eval_mach(datcom_case, mach_matrix(1:extras, end)', output_type, size(mach_array, 2));
+        y(1:extras, end) = eval_mach(datcom_case, mach_matrix(1:extras, end)', output_type);
     else 
-        y(:, end) = eval_mach(datcom_case, mach_matrix(:, end)', output_type, size(mach_array, 2));
+        y(:, end) = eval_mach(datcom_case, mach_matrix(:, end)', output_type);
     end
 
     y = reshape(y, 1, []);

@@ -21,7 +21,7 @@ datcom_case.unit = "M";  % M metri, CM centiemtri, IN inches, ft feet
 datcom_case.x_cg = 1.3; % distanza CG longitudinale dalla sommità del nosecone
 % datcom_case.z_cg = 0;% distanza CG verticale, default 0
 % datcom_case.b_layer = "TURB"; % tipo di strato limite, TURB o NATURAL, default TURB
-datcom_case.roughness = 0.006; % Altezza della rugosità, in centimetri se sistema metrico (anche metri), default 0
+datcom_case.roughness = 0.006; % Altezza della rugosità, in centimetri se sistema metrico, default 0
 % datcom_case.rhr = 250; % Roughness Height Rating, alternativo alla roughness, default 0
 % datcom_case.scale = 1.2; % Fattore di scala, default 1
 

@@ -3,9 +3,11 @@
 %   Email: nicolo.basso@aurorarocketry.eu                       
 %   MSA Department, Aurora Rocketry, University of Bologna      
 %                                  
-function output = eval_mach(datcom_case, mach, output_type ,i)
+function output = eval_mach(datcom_case, mach, output_type)
+
     datcom_case.mach = round(mach, 2);
-    path = i;
+
+    path = round(mach(1) * 1000);
     
     system(['mkdir temp\' int2str(path) '\']);
     system(['copy "DATCOM\for005.dat" "temp\"' int2str(path) '\'], '-echo');
