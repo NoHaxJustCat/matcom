@@ -99,7 +99,9 @@ datcom_case.print_aero_body = true;
 
 % NB: l_max * 2 + l_flat = 1
 
-delete("cases\" + datcom_case.name + ".mat");
+if isfile("cases\" + datcom_case.name + ".mat")
+    delete("cases\" + datcom_case.name + ".mat");
+end
 save("cases\" + datcom_case.name + ".mat", 'datcom_case');
 
 % formatted_case = formattedDisplayText(datcom_case);
