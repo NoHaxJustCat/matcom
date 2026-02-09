@@ -53,7 +53,7 @@ This library is particularly useful for rocket design optimization, stability an
 addpath('lib');
 addpath('src/main');
 addpath('src/modules');
-addpath('src/utils');
+addpath('src/visualization');
 ```
 
 ---
@@ -219,9 +219,13 @@ matcom/
 │   ├── simulate.m             # Single variable simulation
 │   ├── simulate_double.m      # Double variable simulation
 │   ├── eval_mach.m            # Evaluate single Mach point
+│   ├── eval_alpha.m           # Evaluate single alpha point
 │   ├── fast_import_cd.m       # Import drag coefficient
 │   ├── fast_import_x_cp.m     # Import center of pressure
-│   └── write_on_dat.m         # Generate DATCOM input files
+│   ├── write_on_dat.m         # Generate DATCOM input files
+│   ├── add_decimal.m          # Number formatting utility
+│   ├── resize_array.m         # Array manipulation utility
+│   └── parseXML.m             # XML parsing utility
 ├── src/
 │   ├── main/
 │   │   ├── initialize.m       # Initialize and load cases
@@ -229,7 +233,9 @@ matcom/
 │   │   └── setup_paths.m      # Path configuration
 │   ├── modules/
 │   │   └── caseBuilder.m      # Template for creating cases
-│   └── utils/                 # Utility functions
+│   └── visualization/
+│       ├── draw_fins.m        # Fin visualization
+│       └── draw_rocket.m      # Rocket visualization
 ├── data/
 │   └── cases/                 # Saved rocket configurations
 ├── output/                    # Simulation results

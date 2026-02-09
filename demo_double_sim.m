@@ -8,7 +8,7 @@ clear all; close all; clc;
 addpath('lib');
 addpath('src\main');
 addpath('src\modules');
-addpath('src\utils');
+addpath('src\visualization');
 addpath('data\cases');
 
 % Load the BOREALIS rocket case

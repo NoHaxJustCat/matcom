@@ -5,9 +5,8 @@
 %                                                               
 function [x, y] = simulate(datcom_case, mach_array, varargin)
 
-    % Ciclo per elaborare i parametri opzionali da varargin
+    % Process optional parameters from varargin
     if nargin > 2
-        % `varargin` contiene coppie di nome-valore; lo scansioniamo
         for i = 1:1:length(varargin)
             switch i
                 case 1

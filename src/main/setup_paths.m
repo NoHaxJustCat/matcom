@@ -8,7 +8,6 @@ function setup_paths()
     % Add source directories
     addpath(fullfile(project_root, 'src', 'main'));
     addpath(fullfile(project_root, 'src', 'modules'));
-    addpath(fullfile(project_root, 'src', 'utils'));
     addpath(fullfile(project_root, 'src', 'visualization'));
     
     % Add library directory

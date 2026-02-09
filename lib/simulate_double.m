@@ -4,11 +4,10 @@
 %   MSA Department, Aurora Rocketry, University of Bologna      
 %                     
 function [x, y, Z] = simulate_double(datcom_case, mach_array, param, param_type, varargin)
-    %SIMULATE_DOUBLE Summary of this function goes here
-    %   Detailed explanation goes here
-    % Ciclo per elaborare i parametri opzionali da varargin
+    %SIMULATE_DOUBLE Perform double variable simulation (Mach number and parameter sweep)
+    %   Simulates aerodynamic properties across a grid of Mach numbers and a varying parameter
+    % Process optional parameters from varargin
     if nargin > 2
-        % `varargin` contiene coppie di nome-valore; lo scansioniamo
         for i = 1:1:length(varargin)
             switch i
                 case 1
