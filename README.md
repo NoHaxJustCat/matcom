@@ -8,7 +8,7 @@ A powerful MATLAB library that provides a seamless interface to Missile DATCOM (
 
 ---
 
-## 📋 Overview
+## Overview
 
 MatComLib bridges the gap between MATLAB's computational capabilities and Missile DATCOM's aerodynamic prediction tools. It automates the entire workflow of:
 
@@ -22,7 +22,7 @@ This library is particularly useful for rocket design optimization, stability an
 
 ---
 
-## ✨ Features
+## Features
 
 - **Structured Case Definition**: Define rocket geometry using intuitive MATLAB structures
 - **Single Variable Simulations**: Sweep across Mach numbers or other flight conditions
@@ -35,7 +35,7 @@ This library is particularly useful for rocket design optimization, stability an
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ addpath('src/utils');
 
 ---
 
-## 📖 Usage
+## Usage
 
 ### Quick Start Example
 
@@ -173,9 +173,9 @@ zlabel('Center of Pressure [m]');
 
 ---
 
-## 🎯 Demonstration: Double Variable Simulation
+## Demonstration: Double Variable Simulation
 
-Here's a real example from our test case analyzing the BOREALIS rocket. We varied both Mach number (0.3 to 1.2) and fin semi-span (0.08 to 0.14 m) to observe their effect on the center of pressure:
+The following example demonstrates a parametric study of the BOREALIS rocket configuration. The analysis examines the coupled effects of Mach number (0.3 to 1.2) and fin semi-span (0.08 to 0.14 m) on center of pressure location:
 
 ### Simulation Setup
 
@@ -209,22 +209,9 @@ Summary Statistics:
   Max x_cp: -1.0570 m (transonic, small fins)
 ```
 
-### Key Observations
-
-1. **Fin Size Effect**: Larger fins move the center of pressure significantly aft (more negative)
-2. **Transonic Behavior**: Notable shift around Mach 0.9-1.0 due to shock formation
-3. **Supersonic Trend**: Center of pressure moves aft as Mach increases beyond 1.0
-4. **Stability Implications**: All configurations show stable characteristics (CP aft of nominal CG)
-
-Run the demo yourself:
-
-```matlab
-run('demo_double_sim.m');
-```
-
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 matcom/
@@ -252,7 +239,7 @@ matcom/
 
 ---
 
-## 🔧 Available Functions
+## Reference
 
 ### Core Simulation Functions
 
@@ -274,7 +261,7 @@ matcom/
 
 ---
 
-## 📊 Typical Workflow
+## Typical Workflow
 
 1. **Define Geometry**: Create rocket case using `caseBuilder.m`
 2. **Save Case**: Store as `.mat` file in `data/cases/`
@@ -285,7 +272,7 @@ matcom/
 
 ---
 
-## ⚠️ Notes & Limitations
+## Notes and Limitations
 
 - Currently optimized for Windows (uses Windows-specific file commands)
 - Requires valid DATCOM installation and executable
@@ -295,40 +282,28 @@ matcom/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Areas for improvement:
+Contributions to this project are welcome. Priority areas for development include:
 
 - Cross-platform compatibility (Linux/Mac support)
 - Additional output parameter extraction
 - Visualization tools
 - Performance optimization
-- Documentation examples
+- Documentation and examples
 
 ---
 
-## 📝 License
+## License
 
 Please refer to the original author and Aurora Rocketry, University of Bologna for licensing information.
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions, issues, or collaboration:
 
 - **Author**: Nicolò Basso
 - **Email**: nicolo.basso@aurorarocketry.eu
 - **Organization**: MSA Department, Aurora Rocketry, University of Bologna
-
----
-
-## 🙏 Acknowledgments
-
-- Missile DATCOM development team
-- Aurora Rocketry at University of Bologna
-- Contributors to the MATLAB aerospace community
-
----
-
-_Happy simulating! 🚀_
