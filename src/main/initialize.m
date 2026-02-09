@@ -1,4 +1,5 @@
-function loaded_case = initialize(case_name)        
+function loaded_case = initialize(case_name)  
+    addpath("libs");      
     system('rmdir /S /Q  temp\.', '-echo');
     
     loaded_case = load("cases\" + case_name +  ".mat").datcom_case;

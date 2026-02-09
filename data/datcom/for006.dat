@@ -15,14 +15,14 @@
 
    1 CASEID BOREALIS                                                                 
    2 DIM M                                                                           
-   3  $REFQ XCG=1.3,ROUGH=0.006,$                                                    
+   3  $REFQ XCG=1.3,SREF=0.00785,LREF=0.1,LATREF=0.1,ROUGH=0.002,$                   
    4  $FLTCON ALPHA=0.,                                                              
-   5  NMACH=1.,MACH=0.4,                                                             
+   5  NMACH=1.,MACH=0.7,                                                             
    6  ALT=0.,                                                                        
    7  $END                                                                           
    8  $AXIBOD TNOSE=POWER,                                                           
                ** SUBSTITUTING NUMERIC FOR NAME POWER
-   9  POWER=0.4,                                                                     
+   9  POWER=0.7,                                                                     
   10  LNOSE=0.55,                                                                    
   11  DNOSE=0.1,                                                                     
   12  LCENTR=1.4,                                                                    
@@ -31,19 +31,19 @@
                ** SUBSTITUTING NUMERIC FOR NAME CONE
   15  LAFT=0.1,                                                                      
   16  DAFT=0.0698,                                                                   
-  17  DEXIT=0.05,                                                                    
+  17  DEXIT=0.,                                                                      
   18  $END                                                                           
   19  $PROTUB $END                                                                   
   20  $FINSET1 SECTYP=HEX,                                                           
                ** SUBSTITUTING NUMERIC FOR NAME HEX
   21  SSPAN=0.,0.11,                                                                 
   22  CHORD=0.24,0.12,                                                               
-  23  XLE=1.71,                                                                      
-  24  SWEEP=28.6,                                                                    
-  25  NPANEL=3.,                                                                     
-  26  ZUPPER=0.00625,0.0125,                                                         
-  27  LMAXU=0.3,0.3,                                                                 
-  28  LFLATU=0.4,0.4,                                                                
+  23  XLE=1.71,1.77,                                                                 
+  24  NPANEL=3.,                                                                     
+  25  ZUPPER=0.00625,0.0125,                                                         
+  26  LMAXU=0.5,0.5,                                                                 
+  27  LFLATU=1.,1.,                                                                  
+  28  PHIF=0.,120.,240.,                                                             
   29  $END                                                                           
   30 PRINT GEOM BODY                                                                 
   31 PRINT AERO BODY                                                                 
@@ -56,13 +56,13 @@
 
  CASEID BOREALIS                                                                 
  DIM M                                                                           
-  $REFQ XCG=1.3,ROUGH=0.006,$                                                    
+  $REFQ XCG=1.3,SREF=0.00785,LREF=0.1,LATREF=0.1,ROUGH=0.002,$                   
   $FLTCON ALPHA=0.,                                                              
-  NMACH=1.,MACH=0.4,                                                             
+  NMACH=1.,MACH=0.7,                                                             
   ALT=0.,                                                                        
   $END                                                                           
   $AXIBOD TNOSE=2.,                                                              
-  POWER=0.4,                                                                     
+  POWER=0.7,                                                                     
   LNOSE=0.55,                                                                    
   DNOSE=0.1,                                                                     
   LCENTR=1.4,                                                                    
@@ -70,26 +70,24 @@
   TAFT=0.,                                                                       
   LAFT=0.1,                                                                      
   DAFT=0.0698,                                                                   
-  DEXIT=0.05,                                                                    
+  DEXIT=0.,                                                                      
   $END                                                                           
   $PROTUB $END                                                                   
   $FINSET1 SECTYP=0.,                                                            
   SSPAN=0.,0.11,                                                                 
   CHORD=0.24,0.12,                                                               
-  XLE=1.71,                                                                      
-  SWEEP=28.6,                                                                    
+  XLE=1.71,1.77,                                                                 
   NPANEL=3.,                                                                     
   ZUPPER=0.00625,0.0125,                                                         
-  LMAXU=0.3,0.3,                                                                 
-  LFLATU=0.4,0.4,                                                                
+  LMAXU=0.5,0.5,                                                                 
+  LFLATU=1.,1.,                                                                  
+  PHIF=0.,120.,240.,                                                             
   $END                                                                           
  PRINT GEOM BODY                                                                 
  PRINT AERO BODY                                                                 
  SAVE                                                                            
  NEXT CASE                                                                       
     * WARNING * THE NUMBER OF ANGLES OF ATTACK IS LESS THAN TWO
-    * WARNING * THE REFERENCE AREA IS UNSPECIFIED, DEFAULT VALUE ASSUMED
-    * WARNING * THE REFERENCE LENGTH IS UNSPECIFIED, DEFAULT VALUE ASSUMED
     THE BOUNDARY LAYER IS ASSUMED TO BE TURBULENT
     THE INPUT UNITS ARE IN METERS, THE SCALE FACTOR IS   1.0000
 1         ***** THE USAF AUTOMATED MISSILE DATCOM * REV 3/99 *****     CASE   1
@@ -101,11 +99,11 @@
     SHAPE                   POWER     CYLINDER        CONIC
     LENGTH                  0.550        1.400        0.100        2.050   M
     FINENESS RATIO          5.500       14.000        1.000       20.500
-    PLANFORM AREA           0.039        0.140        0.008        0.188   M**2
-    AREA CENTROID           0.321        1.250        1.997        1.090   M
-    WETTED AREA             0.124        0.440        0.027        0.591   M**2
-    VOLUME                  0.002        0.011        0.001        0.014   M**3
-    VOL. CENTROID           0.354        1.250        1.994        1.126   M
+    PLANFORM AREA           0.032        0.140        0.008        0.181   M**2
+    AREA CENTROID           0.346        1.250        1.997        1.123   M
+    WETTED AREA             0.102        0.440        0.027        0.569   M**2
+    VOLUME                  0.002        0.011        0.001        0.013   M**3
+    VOL. CENTROID           0.388        1.250        1.994        1.166   M
 
                               MOLD LINE CONTOUR
 
@@ -115,8 +113,8 @@
         1.8100     1.9500*    1.9600     1.9700     1.9800     1.9900     2.0000 
         2.0100     2.0200     2.0300     2.0400     2.0500*
 
-                BODY RADII    0.0000     0.0199     0.0263     0.0309     0.0347 
-        0.0379     0.0408     0.0434     0.0457     0.0479     0.0500*    0.0500 
+                BODY RADII    0.0000     0.0100     0.0162     0.0215     0.0263 
+        0.0308     0.0350     0.0390     0.0428     0.0464     0.0500*    0.0500 
         0.0500     0.0500     0.0500     0.0500     0.0500     0.0500     0.0500 
         0.0500     0.0500*    0.0485     0.0470     0.0455     0.0440     0.0424 
         0.0409     0.0394     0.0379     0.0364     0.0349*
@@ -150,29 +148,29 @@
                              BODY ALONE PARTIAL OUTPUT
 
        ******* FLIGHT CONDITIONS AND REFERENCE QUANTITIES *******
-     MACH NO  =       0.40                REYNOLDS NO = 9.274E+06 /M
-     ALTITUDE =        0.0 M         DYNAMIC PRESSURE =  11348.42 N/M**2
+     MACH NO  =       0.70                REYNOLDS NO = 1.623E+07 /M
+     ALTITUDE =        0.0 M         DYNAMIC PRESSURE =  34754.54 N/M**2
      SIDESLIP =       0.00 DEG                   ROLL =      0.00 DEG     
      REF AREA =      0.008 M**2         MOMENT CENTER =     1.300 M
      REF LENGTH =     0.10 M           LAT REF LENGTH =      0.10 M
 
       ALPHA    CA-FRIC  CA-PRES/WAVE CA-BASE    CA-PROT     CA-SEP     CA-ALP
-       0.00     0.3453     0.0588     0.0227     0.0000               -0.0000
-       1.00     0.3452     0.0587     0.0227     0.0000                0.0001
+       0.00     0.2585     0.0592     0.0459     0.0000               -0.0000
+       1.00     0.2584     0.0592     0.0460     0.0000                0.0000
 
-                     CROSS FLOW DRAG PROPORTIONALITY FACTOR = 0.77286
+                     CROSS FLOW DRAG PROPORTIONALITY FACTOR = 0.77569
 
       ALPHA    CN-POTEN  CN-VISC   CN-SEP    CM-POTEN  CM-VISC   CM-SEP    CDC
        0.00     0.000     0.000               0.000     0.000             0.740
-       1.00     0.031     0.004               0.351     0.009             0.744
+       1.00     0.025     0.004               0.388     0.007             0.747
 1         ***** THE USAF AUTOMATED MISSILE DATCOM * REV 3/99 *****     CASE   1
                AERODYNAMIC METHODS FOR MISSILE CONFIGURATIONS          PAGE   5
                                   BOREALIS                                  
                    STATIC AERODYNAMICS FOR BODY-FIN SET 1
 
        ******* FLIGHT CONDITIONS AND REFERENCE QUANTITIES *******
-     MACH NO  =       0.40                REYNOLDS NO = 9.274E+06 /M
-     ALTITUDE =        0.0 M         DYNAMIC PRESSURE =  11348.42 N/M**2
+     MACH NO  =       0.70                REYNOLDS NO = 1.623E+07 /M
+     ALTITUDE =        0.0 M         DYNAMIC PRESSURE =  34754.54 N/M**2
      SIDESLIP =       0.00 DEG                   ROLL =      0.00 DEG     
      REF AREA =      0.008 M**2         MOMENT CENTER =     1.300 M
      REF LENGTH =     0.10 M           LAT REF LENGTH =      0.10 M
@@ -180,13 +178,13 @@
                    ----- LONGITUDINAL -----     -- LATERAL DIRECTIONAL --
          ALPHA       CN        CM        CA        CY       CLN       CLL
 
-          0.00     0.000     0.000     0.548     0.000    -0.000     0.000
-          1.00     0.226    -0.647     0.548     0.000    -0.000     0.000
+          0.00     0.000     0.000     0.452     0.000    -0.000     0.000
+          1.00     0.254    -0.674     0.452     0.000    -0.000     0.000
 
          ALPHA       CL        CD      CL/CD     X-C.P.
 
-          0.00     0.000     0.548     0.000    -2.871
-          1.00     0.216     0.552     0.391    -2.871
+          0.00     0.000     0.452     0.000    -2.649
+          1.00     0.246     0.457     0.540    -2.649
 
     X-C.P. MEAS. FROM MOMENT CENTER IN REF. LENGTHS, NEG. AFT OF MOMENT CENTER
 1         ***** THE USAF AUTOMATED MISSILE DATCOM * REV 3/99 *****     CASE   1
@@ -195,16 +193,16 @@
                    STATIC AERODYNAMICS FOR BODY-FIN SET 1
 
        ******* FLIGHT CONDITIONS AND REFERENCE QUANTITIES *******
-     MACH NO  =       0.40                REYNOLDS NO = 9.274E+06 /M
-     ALTITUDE =        0.0 M         DYNAMIC PRESSURE =  11348.42 N/M**2
+     MACH NO  =       0.70                REYNOLDS NO = 1.623E+07 /M
+     ALTITUDE =        0.0 M         DYNAMIC PRESSURE =  34754.54 N/M**2
      SIDESLIP =       0.00 DEG                   ROLL =      0.00 DEG     
      REF AREA =      0.008 M**2         MOMENT CENTER =     1.300 M
      REF LENGTH =     0.10 M           LAT REF LENGTH =      0.10 M
 
                    ---------- DERIVATIVES (PER DEGREE) ----------
          ALPHA       CNA         CMA         CYB         CLNB        CLLB
-          0.00      0.2255     -0.6474     -0.2250      0.6446     -0.0014
-          1.00      0.2255     -0.6474     -0.2257      0.6485      0.0027
+          0.00      0.2543     -0.6737     -0.2543      0.6734     -0.0014
+          1.00      0.2543     -0.6737     -0.2556      0.6796      0.0025
 
     PANEL DEFLECTION ANGLES (DEGREES)
     SET    FIN 1   FIN 2   FIN 3   FIN 4   FIN 5   FIN 6   FIN 7   FIN 8

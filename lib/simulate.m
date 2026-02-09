@@ -4,7 +4,6 @@
 %   MSA Department, Aurora Rocketry, University of Bologna      
 %                                                               
 function [x, y] = simulate(datcom_case, mach_array, varargin)
-    output_type = 'cd';
 
     % Ciclo per elaborare i parametri opzionali da varargin
     if nargin > 2

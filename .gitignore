@@ -35,3 +35,30 @@ codegen/
 # buildtool cache folder
 .buildtool/
 
+# Output and temporary files
+output/temp/*
+!output/temp/.gitkeep
+
+# Data folders (large files, not tracked)
+data/cases/*
+data/datcom/*
+!data/cases/.gitkeep
+!data/datcom/.gitkeep
+
+# Log files
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Backup files
+*.bak
+*.backup
+*_old.*

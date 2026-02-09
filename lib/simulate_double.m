@@ -6,9 +6,6 @@
 function [x, y, Z] = simulate_double(datcom_case, mach_array, param, param_type, varargin)
     %SIMULATE_DOUBLE Summary of this function goes here
     %   Detailed explanation goes here
-
-    output_type = 'cd';
-
     % Ciclo per elaborare i parametri opzionali da varargin
     if nargin > 2
         % `varargin` contiene coppie di nome-valore; lo scansioniamo
@@ -24,12 +21,12 @@ function [x, y, Z] = simulate_double(datcom_case, mach_array, param, param_type,
             end
        end
     end
-
+    
     output = zeros(length(mach_array), length(param));
     
     for j = 1:length(param)
         datcom_case.(param_type) = param(:, j);
-        [~, output(:, j)] = simulate(datcom_case, mach_array, "cd");
+        [~, output(:, j)] = simulate(datcom_case, mach_array, output_type);
     end
 
     if exist("interpolation_type", "var")
